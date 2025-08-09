@@ -1,94 +1,30 @@
-# Tarea1
+# System, Language, and Tools
 
-System, Language, and Tools
-Operating System: Compatible with Windows, macOS, or Linux (your choice; Python is cross-platform).
+OS: Works on Windows, macOS, or Linux.
 
-Programming Language: Python 3 (version 3.7 or higher recommended).
+Language: Python 3.
 
-Tools:
+Tools: Visual Studio Code + Python extension + Python interpreter.
 
-Visual Studio Code (VS Code) as the IDE.
+# how to Run in Visual Studio Code
 
-Python extension for VS Code.
+Install Python from python.org.
 
-Python interpreter installed locally.
+Install VS Code and the Python extension.
 
--How to Run the Code in Visual Studio Code
-Install Python:
+Create a .py file, paste the code.
 
-Download and install Python from https://www.python.org/downloads/.
+Select the Python interpreter in VS Code.
 
-Ensure you check the option "Add Python to PATH" during installation.
+Run in terminal:
+python filename.py
 
-Install Visual Studio Code:
+# Algorithm
 
-Download and install VS Code from https://code.visualstudio.com/.
+Goal: Find equivalent DFA states to minimize the automaton.
 
-Install Python Extension in VS Code:
+Mark pairs where one state is final and the other is not.
 
-Open VS Code.
+Iteratively check transitions; if they lead to a marked pair, mark them too.
 
-Go to Extensions (Ctrl+Shift+X or Cmd+Shift+X on Mac).
-
-Search for "Python" and install the one by Microsoft.
-
-Create the Python File:
-
-Open a folder in VS Code.
-
-Create a new file, e.g., dfa_minimization.py.
-
-Paste the Python code you have.
-
-Select Python Interpreter:
-
-Press Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (Mac).
-
-Search for "Python: Select Interpreter" and choose your installed Python version.
-
-Run the Program:
-
-Open a terminal in VS Code (View → Terminal or `Ctrl+``).
-
-Run the program with:
-
-python dfa_minimization.py
-
-
-
-
-
-
--Algorithm Explanation
-The algorithm used is DFA Minimization via the Table-Filling Method (distinguishable pairs method):
-
-Initialization:
-
-Represent all possible pairs of states (i, j) with i < j.
-
-Initially, assume all pairs are equivalent (can be merged).
-
-Marking Non-Equivalent Pairs:
-
-Mark as non-equivalent any pair where:
-
-One state is a final (accepting) state, and the other is not.
-
-Iterative Refinement:
-
-Repeatedly check each pair (i, j):
-
-For each symbol in the alphabet, find the next states (next_i, next_j).
-
-If the next states are already known to be non-equivalent, mark (i, j) as non-equivalent.
-
-Repeat until no changes occur.
-
-Collect Equivalent Pairs:
-
-After refinement, the remaining pairs marked as equivalent are output in lexicographic order.
-
-Complexity:
-
-Worst-case time complexity: O(n² · |Σ|),
-where n = number of states, and |Σ| = size of the alphabet.
+Remaining unmarked pairs are equivalent.
