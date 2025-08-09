@@ -1,3 +1,9 @@
+# Students names and class
+ Daniel Urbano Viana
+ Juan David Mendiola
+ class 3952
+
+
 # System, Language, and Tools
 
 OS: Windows.
