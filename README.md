@@ -1,6 +1,6 @@
 # System, Language, and Tools
 
-OS: Works on Windows, macOS, or Linux.
+OS: Windows.
 
 Language: Python 3.
 
